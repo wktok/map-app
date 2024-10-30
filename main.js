@@ -23,10 +23,6 @@ const map = new maplibregl.Map({
           tileSize: 256,
           attribution: '&copy; <a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院 地理院タイル</a>',
         },
-        // stations: {
-        //   type: 'geojson',
-        //   data: 'data'
-        // }
       },
       layers: [
         {
@@ -34,15 +30,6 @@ const map = new maplibregl.Map({
           type: 'raster',
           source: 'gsi',
         },
-        // {
-        //   id: 'station-layer',
-        //   type: 'circle',
-        //   source: 'stations',
-        //   paint: {
-        //     'circle-radius': 3,
-        //     'circle-color': '#007cbf'
-        //   }
-        // }
       ],
     },
 });
@@ -74,9 +61,31 @@ map.on('style.load', () => {
           'source': 'stations',
           'paint': {
             'circle-radius': 5,
-        'circle-color': color_jy
-      }
-    });
-  })
-  .catch(error => console.error('Error loading GeoJSON:', error));
+            'circle-color': color_jy
+          }
+        });
+      })
+
+    fetch('JY_line_path.geojson')
+    .then(response => response.json())
+    .then(lineData => {
+      map.addSource(
+        'yamanoteLine',{
+          'type': 'geojson',
+          'data': lineData
+        }
+      );
+
+      map.addLayer({
+        'id': 'JY-line-layer',
+        'type': 'line',
+        'source': 'yamanoteLine',
+        'paint': {
+          'line-color': color_jy,
+          'line-width': 2,
+        }
+      });
+    })
+    .catch(error => console.error('Error loading GeoJSON:', error));
+
 });
