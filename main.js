@@ -3,6 +3,7 @@ import maplibre from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import OpacityControl from 'maplibre-gl-opacity';
 import 'maplibre-gl-opacity/dist/maplibre-gl-opacity.css';
+import {lineString, bezierSpline, multiLineString, circle} from '@turf/turf';
 
 var color_jy = '#7BAB4F'
 
@@ -45,7 +46,41 @@ map.on('laod', () =>{
   map.addControl(opacity, 'top-left');
 })
 
-map.on('style.load', () => {
+map.on('style.load', () => {  
+  fetch('JY_line_path.geojson')
+    .then(response => response.json())
+    .then(lineData => {
+      console.log(lineData)
+      const lineFeature = lineData.features.find(
+        feature => feature.geometry.type === "LineString"
+      );
+      if (!lineFeature) {
+        console.error('LineString feature not found');
+        return;
+      }
+      console.log(lineFeature.geometry.coordinates)
+      const line = lineString(lineFeature.geometry.coordinates)
+      const smoothedLine = bezierSpline(line, {sharpness: 0.5});
+
+      map.addSource(
+        'yamanoteLine',{
+          'type': 'geojson',
+          'data': smoothedLine
+        }
+      );
+
+      map.addLayer({
+        'id': 'JY-line-layer',
+        'type': 'line',
+        'source': 'yamanoteLine',
+        'paint': {
+          'line-color': color_jy,
+          'line-width': 5,
+        }
+
+      });
+    });
+
     fetch('JY_stations.geojson')
     .then(response => response.json())
     .then(data => {
@@ -61,31 +96,12 @@ map.on('style.load', () => {
           'source': 'stations',
           'paint': {
             'circle-radius': 5,
-            'circle-color': color_jy
+            'circle-color': '#ffffff',
+            'circle-stroke-width': 1,
+            'circle-stroke-color': '#000'
           }
         });
-      })
-
-    fetch('JY_line_path.geojson')
-    .then(response => response.json())
-    .then(lineData => {
-      map.addSource(
-        'yamanoteLine',{
-          'type': 'geojson',
-          'data': lineData
-        }
-      );
-
-      map.addLayer({
-        'id': 'JY-line-layer',
-        'type': 'line',
-        'source': 'yamanoteLine',
-        'paint': {
-          'line-color': color_jy,
-          'line-width': 2,
-        }
-      });
-    })
+      })  
     .catch(error => console.error('Error loading GeoJSON:', error));
 
 });

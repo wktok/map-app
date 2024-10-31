@@ -11,7 +11,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_01",
                 "station_name": "東京"
             }
         },
@@ -25,7 +24,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_02",
                 "station_name": "神田"
             }
         },
@@ -34,12 +32,11 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    139.775504,
-                    35.6984622
+                    139.7730331,
+                    35.6983494
                 ]
             },
             "properties": {
-                "station_code": "JY_03",
                 "station_name": "秋葉原"
             }
         },
@@ -53,7 +50,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_04",
                 "station_name": "御徒町"
             }
         },
@@ -67,7 +63,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_05",
                 "station_name": "上野"
             }
         },
@@ -81,7 +76,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_06",
                 "station_name": "鶯谷"
             }
         },
@@ -95,7 +89,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_07",
                 "station_name": "日暮里"
             }
         },
@@ -109,7 +102,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_08",
                 "station_name": "西日暮里"
             }
         },
@@ -123,7 +115,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_09",
                 "station_name": "田端"
             }
         },
@@ -137,7 +128,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_10",
                 "station_name": "駒込"
             }
         },
@@ -151,7 +141,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_11",
                 "station_name": "巣鴨"
             }
         },
@@ -165,7 +154,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_12",
                 "station_name": "大塚"
             }
         },
@@ -179,7 +167,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_13",
                 "station_name": "池袋"
             }
         },
@@ -193,7 +180,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_14",
                 "station_name": "目白"
             }
         },
@@ -207,7 +193,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_15",
                 "station_name": "高田馬場"
             }
         },
@@ -221,7 +206,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_16",
                 "station_name": "新大久保"
             }
         },
@@ -235,7 +219,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_17",
                 "station_name": "新宿"
             }
         },
@@ -249,7 +232,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_18",
                 "station_name": "代々木"
             }
         },
@@ -263,7 +245,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_19",
                 "station_name": "原宿"
             }
         },
@@ -277,7 +258,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_20",
                 "station_name": "渋谷"
             }
         },
@@ -291,7 +271,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_21",
                 "station_name": "恵比寿"
             }
         },
@@ -305,7 +284,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_22",
                 "station_name": "目黒"
             }
         },
@@ -319,7 +297,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_23",
                 "station_name": "五反田"
             }
         },
@@ -333,7 +310,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_24",
                 "station_name": "大崎"
             }
         },
@@ -347,7 +323,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_25",
                 "station_name": "品川"
             }
         },
@@ -361,7 +336,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_26",
                 "station_name": "高輪ゲートウェイ"
             }
         },
@@ -375,7 +349,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_27",
                 "station_name": "田町"
             }
         },
@@ -389,7 +362,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_28",
                 "station_name": "浜松町"
             }
         },
@@ -403,7 +375,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_29",
                 "station_name": "新橋"
             }
         },
@@ -417,7 +388,6 @@
                 ]
             },
             "properties": {
-                "station_code": "JY_30",
                 "station_name": "有楽町"
             }
         }

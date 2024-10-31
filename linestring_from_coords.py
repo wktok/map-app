@@ -1,7 +1,7 @@
 import json
 
 # Load the station GeoJSON
-with open('map-app/JY_stations.geojson', 'r', encoding='utf-8') as f:
+with open('map-app/JY_nodes.geojson', 'r', encoding='utf-8') as f:
     stations_data = json.load(f)
 
 # Extract coordinates in the desired order for the path

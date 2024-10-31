@@ -1,0 +1,425 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.766706,
+                    35.6812546
+                ]
+            },
+            "properties": {
+                "station_code": "JY_01",
+                "station_name": "東京"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.770917,
+                    35.6917842
+                ]
+            },
+            "properties": {
+                "station_code": "JY_02",
+                "station_name": "神田"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.775504,
+                    35.6984622
+                ]
+            },
+            "properties": {
+                "station_code": "JY_03",
+                "station_name": "秋葉原"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7746303,
+                    35.7069531
+                ]
+            },
+            "properties": {
+                "station_code": "JY_04",
+                "station_name": "御徒町"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7766557,
+                    35.7133757
+                ]
+            },
+            "properties": {
+                "station_code": "JY_05",
+                "station_name": "上野"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7779486,
+                    35.7216638
+                ]
+            },
+            "properties": {
+                "station_code": "JY_06",
+                "station_name": "鶯谷"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7704775,
+                    35.728256
+                ]
+            },
+            "properties": {
+                "station_code": "JY_07",
+                "station_name": "日暮里"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7667061,
+                    35.7321417
+                ]
+            },
+            "properties": {
+                "station_code": "JY_08",
+                "station_name": "西日暮里"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7617151,
+                    35.7373701
+                ]
+            },
+            "properties": {
+                "station_code": "JY_09",
+                "station_name": "田端"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7472412,
+                    35.7365848
+                ]
+            },
+            "properties": {
+                "station_code": "JY_10",
+                "station_name": "駒込"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7394273,
+                    35.7334119
+                ]
+            },
+            "properties": {
+                "station_code": "JY_11",
+                "station_name": "巣鴨"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7283438,
+                    35.7317401
+                ]
+            },
+            "properties": {
+                "station_code": "JY_12",
+                "station_name": "大塚"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7111534,
+                    35.7301957
+                ]
+            },
+            "properties": {
+                "station_code": "JY_13",
+                "station_name": "池袋"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7064823,
+                    35.7211861
+                ]
+            },
+            "properties": {
+                "station_code": "JY_14",
+                "station_name": "目白"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7036425,
+                    35.7126839
+                ]
+            },
+            "properties": {
+                "station_code": "JY_15",
+                "station_name": "高田馬場"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7002421,
+                    35.7013007
+                ]
+            },
+            "properties": {
+                "station_code": "JY_16",
+                "station_name": "新大久保"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7007324,
+                    35.6890683
+                ]
+            },
+            "properties": {
+                "station_code": "JY_17",
+                "station_name": "新宿"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7019863,
+                    35.6839356
+                ]
+            },
+            "properties": {
+                "station_code": "JY_18",
+                "station_name": "代々木"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7024696,
+                    35.6702171
+                ]
+            },
+            "properties": {
+                "station_code": "JY_19",
+                "station_name": "原宿"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7017546,
+                    35.6580785
+                ]
+            },
+            "properties": {
+                "station_code": "JY_20",
+                "station_name": "渋谷"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7101921,
+                    35.6464305
+                ]
+            },
+            "properties": {
+                "station_code": "JY_21",
+                "station_name": "恵比寿"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7160514,
+                    35.6327942
+                ]
+            },
+            "properties": {
+                "station_code": "JY_22",
+                "station_name": "目黒"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7236813,
+                    35.6261984
+                ]
+            },
+            "properties": {
+                "station_code": "JY_23",
+                "station_name": "五反田"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7285191,
+                    35.619399
+                ]
+            },
+            "properties": {
+                "station_code": "JY_24",
+                "station_name": "大崎"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.739064,
+                    35.6286782
+                ]
+            },
+            "properties": {
+                "station_code": "JY_25",
+                "station_name": "品川"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7408146,
+                    35.6353519
+                ]
+            },
+            "properties": {
+                "station_code": "JY_26",
+                "station_name": "高輪ゲートウェイ"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7476989,
+                    35.6457196
+                ]
+            },
+            "properties": {
+                "station_code": "JY_27",
+                "station_name": "田町"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.757036,
+                    35.6551142
+                ]
+            },
+            "properties": {
+                "station_code": "JY_28",
+                "station_name": "浜松町"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7582879,
+                    35.6661801
+                ]
+            },
+            "properties": {
+                "station_code": "JY_29",
+                "station_name": "新橋"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.7631061,
+                    35.6748872
+                ]
+            },
+            "properties": {
+                "station_code": "JY_30",
+                "station_name": "有楽町"
+            }
+        }
+    ]
+}
