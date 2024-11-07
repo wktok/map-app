@@ -26,7 +26,9 @@ feature_template = {
         "coordinates": [0, 0]
     },
     "properties": {
-        "node": ""
+        "is_station": "",
+        "station_name": "",
+        "station_code": "",
     }
 }
 
@@ -36,11 +38,15 @@ for row in csv_data:
     if row[0] == 'lon':
         continue
 
-    # get feature
+    # insert feature data
     feature = copy.deepcopy(feature_template)
     feature['geometry']['coordinates'] = [float(row[1]), float(row[0])]
-    feature['properties']['station_name'] = str(row[2])
-
+    if str(row[2]) != "cp":
+        feature['properties']['is_station'] = 1
+        feature['properties']['station_name'] = str(row[2])
+    else:
+        feature['properties']['is_station'] = 0
+    # add feature to collection
     feature_collection['features'].append(feature)
 
 # export geojson file

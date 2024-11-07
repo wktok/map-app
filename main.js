@@ -7,7 +7,7 @@ import {lineString, bezierSpline, length, along} from '@turf/turf';
 
 
 var color_jy = '#7BAB4F';
-var train_size = 0.0015;
+var train_size = 3;
 
 const map = new maplibregl.Map({
     container: 'map', // container id
@@ -85,21 +85,18 @@ function startAnimation(smoothedLine, train){
   let currentIndex = 0;
 
   function moveTrain() {
-    const currentCoord = interpolatedPoints[currentIndex];
-
-    // Update the rectangle's coordinates to center around `currentPos`
-    // rotation is not considered at this point
-    train.geometry.coordinates = [[
-      [currentCoord[0] - train_size, currentCoord[1] + train_size],
-      [currentCoord[0] + train_size, currentCoord[1] + train_size],
-      [currentCoord[0] + train_size, currentCoord[1] - train_size],
-      [currentCoord[0] - train_size, currentCoord[1] - train_size],
-      [currentCoord[0] - train_size, currentCoord[1] + train_size]  // Close the polygon
-    ]];
-
-    map.getSource('train-rect').setData(train);
+    const trainShape = [];
+    for (let i = 0; i < 10; i++) {
+      trainShape.push(interpolatedPoints[currentIndex + train_size*i])
+    }
     
-    if (currentIndex < interpolatedPoints.length - 1){
+    // Update the LineString coordinates to `currentPos`
+    // rotation is not considered at this point
+    train.geometry.coordinates = trainShape;
+
+    map.getSource('train-shape').setData(train);
+    
+    if (currentIndex < interpolatedPoints.length - 2){
       currentIndex++;
     } else {
       currentIndex = 0;
@@ -112,35 +109,36 @@ function startAnimation(smoothedLine, train){
 
 map.on('style.load', () => { 
 
-  // Initial rectangle(train) coordinates 
+  // Initial train shape coordinates 
   let train = {
     type: 'Feature',
     geometry: {
-      type: 'Polygon',
-      coordinates: [[
-        [139.700, 35.690],  // Adjust coordinates and size for your case
-        [139.701, 35.690],
-        [139.701, 35.689],
-        [139.700, 35.689],
-        [139.700, 35.690]   // Close the polygon
-      ]]
+      type: 'LineString',
+      coordinates: [
+        [139.7667060, 35.6812546,],
+        [139.7709170, 35.6917842]   
+      ]
     }
   };
 
-  // Add the rectangle as a source to the map
-  map.addSource('train-rect', {
+  // Add the lineString as a source to the map
+  map.addSource('train-shape', {
     type: 'geojson',
     data: train
   });
 
-  // Add a layer to visualize the rectangle
+  // Add a layer to visualize the lineString
   map.addLayer({
-    id: 'train-rect-layer',
-    type: 'fill',
-    source: 'train-rect',
+    id: 'train-shape-layer',
+    type: 'line',
+    source: 'train-shape',
+    layout: {
+      'line-join': 'miter',
+      'line-cap': 'square'
+    },
     paint: {
-      'fill-color': color_jy,
-      'fill-opacity': 0.9
+      'line-color': color_jy,
+      'line-width': 3
     }
   });
 
@@ -210,7 +208,7 @@ map.on('style.load', () => {
     overLayers:{
       'JY-line-layer': '山手線',
       'station-layer': '駅',
-      'train-rect-layer': '電車'
+      'train-shape-layer': '電車'
     },
   });
   map.addControl(opacity, 'top-left');
@@ -221,7 +219,7 @@ map.on('style.load', () => {
 
 // 電車の大きさを緯度経度で管理してるのでズームアウトすると相対的に小さくなって見えない。
 // 角度が一定
-// →今のノードと次のノードをつないだ線分に太さと長さを与えたほうがいい感じかもしれない
+// 〇　→今のノードと次のノードをつないだ線分に太さと長さを与えたほうがいい感じかもしれない
 
 // 更に今後できたらいいこと
 // 駅でとまる
